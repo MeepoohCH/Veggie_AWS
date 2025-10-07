@@ -1,0 +1,13 @@
+services:
+  veggie_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: veggie_app
+    ports:
+      - "5000:5000"   # map port 5000 ของ container ไป host
+    volumes:
+      - .:/app        # sync โค้ดจาก host ไป container
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: always
