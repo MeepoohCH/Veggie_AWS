@@ -130,7 +130,6 @@ async def predict(image: UploadFile = File(...)):
             predictions.append({
                 "class": class_name,
                 "confidence": float(s),
-                "box": [float(x) for x in b]
             })
 
         if len(predictions) == 0:

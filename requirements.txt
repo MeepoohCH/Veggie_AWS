@@ -4,3 +4,4 @@ gunicorn
 pillow
 ultralytics
 python-multipart
+ensemble-boxes
